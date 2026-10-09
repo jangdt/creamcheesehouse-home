@@ -1,0 +1,2 @@
+bhs.woff2 = Black Han Sans (Copyright 2015 Zess Type, with Reserved Font Name "Black Han Sans") 의 글자 일부만 남긴 판.
+SIL Open Font License 1.1 — https://openfontlicense.org
