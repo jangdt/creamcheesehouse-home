@@ -1,2 +1,3 @@
-bhs.woff2 = Black Han Sans (Copyright 2015 Zess Type, with Reserved Font Name "Black Han Sans") 의 글자 일부만 남긴 판.
-SIL Open Font License 1.1 — https://openfontlicense.org
+barlowc.woff2 = Barlow Condensed Bold (Copyright 2017 The Barlow Project Authors) 의 글자 일부만 남긴 판.
+suit.woff2 = SUIT Bold (Copyright (c) 2022 SUNN, with Reserved Font Name SUIT) 의 글자 일부만 남긴 판.
+둘 다 SIL Open Font License 1.1 — https://openfontlicense.org (원문: Barlow-OFL.txt · SUIT-OFL.txt)
