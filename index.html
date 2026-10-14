@@ -135,16 +135,10 @@ img { display: block; max-width: 100%; height: auto; }
 .c-kr { --s-bg: #1F1C17; --s-ink: #FFF6E2; --s-sub: #D8CCAE; --s-acc: #FFD84D; --s-card: #2A261F; --s-pill: rgba(255, 246, 226, .1); --s-on: #FFD84D; --s-line: rgba(255, 246, 226, .14); --s-btn: #FFD84D; --s-btn-ink: #141414; }
 .c-kr .shot { padding-top: 26px; background: #121826; border: 1px solid #3A3427; box-shadow: 0 18px 40px rgba(0, 0, 0, .35); }
 .c-kr .shot::before { content: ""; position: absolute; left: 14px; top: 9px; width: 40px; height: 9px; background: radial-gradient(circle, #6E6656 3.5px, transparent 4px) 0 0 / 13px 9px repeat-x; }
-/* 02 미장 — 밝은 종이 + 파랑 · 준비 중 */
+/* 02 미장 — 밝은 종이 + 파랑 · 화면 캡처는 국장처럼 브라우저 틀에(미장 사이트 다크 바탕 #0D131E) */
 .c-us { --s-bg: #EEF2F8; --s-ink: #1B2333; --s-sub: #4A5568; --s-acc: #2F64C8; --s-card: #DCE5F3; --s-pill: #DCE5F3; --s-on: #2F64C8; --s-line: #D3DCEA; }
-.us-art { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; }
-.us-art .star { fill: #FFF6D0; opacity: .5; }
-.us-art .win { fill: #FFD84D; opacity: .25; }
-.blk:hover .us-art .star { animation: tw 1.6s ease-in-out infinite alternate; }
-.blk:hover .us-art .win { animation: lit .9s steps(2) infinite alternate; }
-.us-art .star:nth-of-type(2n), .us-art .win:nth-of-type(3n) { animation-delay: .4s; }
-@keyframes tw { to { opacity: 1; } }
-@keyframes lit { to { opacity: .95; } }
+.c-us .shot { padding-top: 26px; background: #0D131E; border: 1px solid #C9D3E3; box-shadow: 0 18px 40px rgba(27, 35, 51, .22); }
+.c-us .shot::before { content: ""; position: absolute; left: 14px; top: 9px; width: 40px; height: 9px; background: radial-gradient(circle, #4A5568 3.5px, transparent 4px) 0 0 / 13px 9px repeat-x; }
 /* 03 주식 유튜브 — 채널 칠판 초록 + 형광 노랑 */
 .c-yt { --s-bg: #2B463D; --s-ink: #FFF9EA; --s-sub: #D3E2D8; --s-acc: #FFE14D; --s-card: #233A32; --s-pill: rgba(255, 249, 234, .12); --s-on: #FFE14D; --s-line: rgba(255, 249, 234, .14); --s-btn: #FFE14D; --s-btn-ink: #151515;
   background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 40px 40px; }
@@ -195,7 +189,7 @@ img { display: block; max-width: 100%; height: auto; }
   html { scroll-behavior: auto; }
   .host, .go, .go i, .jump a, .blk, .shot img { transition: none; }
   .blk:hover .shot img { transform: none; }
-  .blk:hover .us-art .star, .blk:hover .us-art .win, .blk:hover .wk-hop img { animation: none; }
+  .blk:hover .wk-hop img { animation: none; }
 }
 
 @media (max-width: 899px) { .top .wide { display: none; }
@@ -334,35 +328,29 @@ img { display: block; max-width: 100%; height: auto; }
     </div>
   </section>
 
-  <!-- 02 오늘 최고의 미장 — 볼 수 없으니 준비 중 한 덩어리 -->
+  <!-- 02 오늘 최고의 미장 — 국장 칸과 같은 꼴: 기능 다섯 줄 · 그림은 미장 사이트 다크 화면(1100 폭 · 종목 이름·티커·점수·종목별 수익 흐림) -->
   <section class="chap c-us" id="us" aria-labelledby="h-us" data-mark="7">
     <div class="in">
       <div class="head">
         <p class="count" aria-hidden="true"><b>02</b></p>
         <div class="main">
           <h2 id="h-us"><a class="ttl" href="https://us.creamcheesehouse.com/?src=home">오늘 최고의 미장</a></h2>
-          <p class="what">미국 주식 연구 후보와 그 이유를 정리해요.</p>
+          <p class="what">미국 주식 시장을 데이터로 읽고, 전략을 시험하고, 그 결과를 매일 기록해요.</p>
         </div>
         <div class="side">
         </div>
       </div>
       <ol class="blks">
-        <li class="blk"><figure class="shot">
-          <svg class="us-art" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="밤의 도시 그림">
-            <defs><linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16204A"/><stop offset="1" stop-color="#3D5BA8"/></linearGradient></defs>
-            <rect width="320" height="200" fill="url(#dusk)"/>
-            <circle cx="252" cy="46" r="18" fill="#FFF3C4"/><circle cx="260" cy="40" r="16" fill="#1B2757"/>
-            <circle class="star" cx="40" cy="30" r="1.6"/><circle class="star" cx="88" cy="18" r="1.2"/><circle class="star" cx="132" cy="40" r="1.5"/>
-            <circle class="star" cx="180" cy="22" r="1.1"/><circle class="star" cx="210" cy="60" r="1.4"/><circle class="star" cx="296" cy="88" r="1.2"/>
-            <g fill="#0E1636"><rect x="10" y="120" width="34" height="80"/><rect x="48" y="96" width="26" height="104"/><rect x="78" y="132" width="30" height="68"/>
-              <rect x="112" y="74" width="22" height="126"/><path d="M118 74l5-20 5 20z"/><rect x="138" y="112" width="40" height="88"/>
-              <rect x="182" y="90" width="28" height="110"/><rect x="214" y="126" width="34" height="74"/><rect x="252" y="104" width="24" height="96"/><rect x="280" y="138" width="36" height="62"/></g>
-            <g><rect class="win" x="54" y="108" width="5" height="6"/><rect class="win" x="63" y="124" width="5" height="6"/><rect class="win" x="117" y="90" width="4" height="6"/>
-              <rect class="win" x="125" y="112" width="4" height="6"/><rect class="win" x="146" y="124" width="6" height="6"/><rect class="win" x="162" y="140" width="6" height="6"/>
-              <rect class="win" x="190" y="104" width="5" height="6"/><rect class="win" x="199" y="132" width="5" height="6"/><rect class="win" x="258" y="118" width="5" height="6"/>
-              <rect class="win" x="20" y="134" width="5" height="6"/><rect class="win" x="222" y="140" width="6" height="6"/><rect class="win" x="290" y="152" width="6" height="6"/></g>
-          </svg></figure>
-          <div class="txt"><h3 class="tt">지금 만들고 있어요</h3><p class="desc">미국 주식 연구 후보와 그 이유를 정리하는 사이트예요.</p><p class="desc">지금은 몇 명만 먼저 보고 있어요.</p></div></li>
+        <li class="blk"><figure class="shot"><img src="us-f1.webp" srcset="us-f1-640.webp 640w, us-f1.webp 1100w" sizes="(min-width: 900px) 600px, 100vw" width="1100" height="700" alt="오늘 최고의 미장 장세 판단 화면" loading="lazy" decoding="async"></figure>
+          <div class="txt"><h3 class="tt"><span class="no">01</span>장세 판단</h3><p class="desc">세 지수의 신호와 금리·달러, 다가올 일정까지 한눈에 봐요.</p></div></li>
+        <li class="blk"><figure class="shot"><img src="us-f2.webp" srcset="us-f2-640.webp 640w, us-f2.webp 1100w" sizes="(min-width: 900px) 600px, 100vw" width="1100" height="700" alt="오늘 최고의 미장 투자 전략 화면" loading="lazy" decoding="async"></figure>
+          <div class="txt"><h3 class="tt"><span class="no">02</span>투자 전략</h3><p class="desc">공포 투자부터 장기 투자까지 전략마다 진입&nbsp;신호를 찾아내요.</p></div></li>
+        <li class="blk"><figure class="shot"><img src="us-f3.webp" srcset="us-f3-640.webp 640w, us-f3.webp 1100w" sizes="(min-width: 900px) 600px, 100vw" width="1100" height="700" alt="오늘 최고의 미장 관리 종목 지도 화면" loading="lazy" decoding="async"></figure>
+          <div class="txt"><h3 class="tt"><span class="no">03</span>관리 종목</h3><p class="desc">S&amp;P 500과 나스닥 100, 테마 종목까지 지도 한&nbsp;장으로 봐요.</p></div></li>
+        <li class="blk"><figure class="shot"><img src="us-f4.webp" srcset="us-f4-640.webp 640w, us-f4.webp 1100w" sizes="(min-width: 900px) 600px, 100vw" width="1100" height="700" alt="오늘 최고의 미장 추종 기록 화면" loading="lazy" decoding="async"></figure>
+          <div class="txt"><h3 class="tt"><span class="no">04</span>추종 기록</h3><p class="desc">전략들이 매일 고른 종목을 따라 샀다면 어땠는지 확인해요.</p></div></li>
+        <li class="blk"><figure class="shot"><img src="us-f5.webp" srcset="us-f5-640.webp 640w, us-f5.webp 1100w" sizes="(min-width: 900px) 600px, 100vw" width="1100" height="700" alt="오늘 최고의 미장 실험 연구 화면" loading="lazy" decoding="async"></figure>
+          <div class="txt"><h3 class="tt"><span class="no">05</span>실험 연구</h3><p class="desc">세계적으로 알려진 전략을 찾아 미국 자료로 시험해요.</p></div></li>
       </ol>
     </div>
   </section>
@@ -433,7 +421,7 @@ img { display: block; max-width: 100%; height: auto; }
         <li><time datetime="2026-10-08">10.08</time><span>주식 유튜브 채널 시작</span></li>
         <li><time datetime="2026-10-09">10.09</time><span>회사 도메인 creamcheesehouse.com과 브랜드 문구</span></li>
         <li><time datetime="2026-10-09">10.09</time><span>오늘 최고의 국장 새 주소 kr.creamcheesehouse.com 공개</span></li>
-        <li><span class="now">지금</span><span>오늘 최고의 미장 준비 중 · 왁뿌월드 미리보기</span></li>
+        <li><span class="now">지금</span><span>오늘 최고의 미장 · 왁뿌월드 미리보기</span></li>
       </ol>
     </div>
   </section>
