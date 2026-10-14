@@ -59,4 +59,4 @@ Disallow: /
 User-agent: *
 Disallow: /
 
-Sitemap: https://creamcheesehouse.com/sitemap.xml
+Sitemap: https://www.creamcheesehouse.com/sitemap.xml
